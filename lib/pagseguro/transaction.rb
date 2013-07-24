@@ -150,6 +150,11 @@ module PagSeguro
       @status = ensure_type(PaymentStatus, status)
     end
 
+    # Set escrow_end_date instance value
+    def escrow_end_date=(escrow_end_date)
+      @escrow_end_date = escrow_end_date
+    end
+
     private
     def after_initialize
       @errors = Errors.new
